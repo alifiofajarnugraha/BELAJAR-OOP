@@ -6,11 +6,13 @@ public class Main {
         Bukubacaan peminjam1 = new Bukubacaan();
         peminjam1.karya = "Dedy corbuzer";
         peminjam1.judul = "Sukses untuk masa depan";
+        peminjam1.harga = 40000;
         
         Bukuilmiah peminjam2 = new Bukuilmiah();
-        peminjam2.penulis = "agung sudrajad";
+        peminjam2.penulis = "agung sudrajad"; 
         peminjam2.topik = "'kesehatan masyarakat'";
         peminjam2.tahunTerbit= 2019;
+        peminjam2.harga = 80000;
     
         System.out.println("Buku yang dapat di pinjam adalah 1. Bukubacaan{1} 2. Bukuilmiah{2}");
         System.out.println("Masukan kode buku : ");
@@ -19,13 +21,18 @@ public class Main {
         if (kodebuku.equals("1")){
             System.out.println("Masukan nama anda : ");
             peminjam1.Nama = scanner.nextLine();
-            peminjam1.Peminjaman();
+            peminjam1.Peminjaman(); 
+            peminjam1.hargapinjaman();
+            peminjam1.hargapinjaman(3, 40000);
             peminjam1.peraturanPeminjaman();
             peminjam1.terimakasih();
+            
         }else if (kodebuku.equals("2")){
             System.out.println("Masukan nama anda : ");
             peminjam2.Nama = scanner.nextLine();
             peminjam2.Peminjaman();
+            peminjam2.hargapinjaman();
+            peminjam2.hargapinjaman(3, 65000);
             peminjam2.peraturanPeminjaman();
             peminjam2.terimakasih();
 
